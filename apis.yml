@@ -1,7 +1,6 @@
 aid: sitegrab
 name: SiteGrab Screenshot API (LaminarForge)
-description: 'SiteGrab Screenshot API (LaminarForge) is a company surfaced via the API Evangelist harvest
-  backlog (source: new-submission) and added to the network as a stub for full-pipeline profiling.'
+description: 'SiteGrab Screenshot API, built by LaminarForge, provides a simple REST interface to capture full-page, responsive screenshots of any website. It supports JPEG and PNG formats, custom viewport sizes, and offers a free tier of 50 screenshots per month with no credit card required. The service is powered by Playwright on dedicated VPS for pixel-perfect results, and includes rate limits and pricing plans for higher usage.'
 url: https://raw.githubusercontent.com/api-evangelist/sitegrab/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:new-submission
@@ -12,17 +11,36 @@ created: '2026-10-17'
 modified: '2026-10-17'
 tags:
 - Company
-apis: []
+apis:
+  - name: SiteGrab Screenshot API
+    description: Capture pixel-perfect screenshots of any webpage via a simple REST API.
+    humanURL: https://api.sitegrab.dev/v1/docs
+    baseURL: https://api.sitegrab.dev
+    properties:
+      - type: OpenAPI
+        url: openapi/sitegrab-openapi.json
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/sitegrab-domain-security.yml
 - type: Website
   url: https://sitegrab.dev/
 - type: Documentation
   url: https://api.sitegrab.dev/v1/docs
+- type: DeveloperPortal
+  url: https://sitegrab.dev/
+- type: APIReference
+  url: https://api.sitegrab.dev/v1/docs
+- type: GettingStarted
+  url: https://sitegrab.dev/signup
+- type: Support
+  url: https://sitegrab.dev/contact
+- type: TermsOfService
+  url: https://sitegrab.dev/terms
 x-submission-notes: OpenAPI 3.0.3 live; free 50/mo
 x-submission-probe: openapi.json 200, docs 200, root 200, JSON 404
 x-submitted-by: ukcjmad@yahoo.com (apis.io/add, 2026-10-15)
