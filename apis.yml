@@ -1,9 +1,6 @@
 aid: sitegrab
 name: SiteGrab Screenshot API (LaminarForge)
-description: SiteGrab Screenshot API, built by LaminarForge, provides a simple REST interface to capture full-page, responsive screenshots of
-  any website. It supports JPEG and PNG formats, custom viewport sizes, and offers a free tier of 50 screenshots per month with no credit card
-  required. The service is powered by Playwright on dedicated VPS for pixel-perfect results, and includes rate limits and pricing plans for higher
-  usage.
+description: SiteGrab Screenshot API, built by LaminarForge, provides a simple REST interface to capture full-page, responsive screenshots of any website. It supports JPEG, PNG, and PDF formats, custom viewport sizes, and offers a free tier of 50 screenshots per month with no credit card required. The service is powered by Playwright on dedicated VPS for pixel‑perfect results, includes detailed usage statistics, rate limits, and tiered pricing plans for higher usage, and is designed for developers needing reliable, high‑quality visual snapshots of web pages.
 url: https://raw.githubusercontent.com/api-evangelist/sitegrab/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:new-submission
