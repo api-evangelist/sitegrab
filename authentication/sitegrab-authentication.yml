@@ -1,0 +1,15 @@
+generated: '2026-10-18'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://sitegrab.dev/signup
+sources:
+- https://sitegrab.dev/signup
+description: Authentication uses an API key passed as a Bearer token in the Authorization header.
+schemes:
+- type: http-bearer
+  name: Bearer
+  evidence: 'Then try it: curl -H ''Authorization: Bearer ***}'' https://api.sitegrab.dev/v1/screenshot?url=https://example.com --output shot.png'
+  location: header
+  header: Authorization
+  how_to_obtain: 'Generate an API key via POST https://api.sitegrab.dev/v1/keys with a JSON body {"tier": "free"}.'
+docs: https://sitegrab.dev/signup

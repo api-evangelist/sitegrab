@@ -1,0 +1,18 @@
+generated: '2026-10-18'
+method: none
+source:
+- https://zapier.com/apps/sitegrab/integrations
+- https://zapier.com/apps/sitegrab-screenshot-api-laminarforge/integrations
+- https://n8n.io/integrations/sitegrab/
+- https://composio.dev/toolkits/sitegrab
+- https://monid.ai/tools/sitegrab
+checked:
+- https://composio.dev/toolkits/sitegrab
+- https://monid.ai/tools/sitegrab
+- https://n8n.io/integrations/sitegrab/
+- https://zapier.com/apps/sitegrab-screenshot-api-laminarforge/integrations
+- https://zapier.com/apps/sitegrab/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []

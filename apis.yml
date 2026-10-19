@@ -1,11 +1,14 @@
 aid: sitegrab
 name: SiteGrab Screenshot API (LaminarForge)
-description: SiteGrab Screenshot API, built by LaminarForge, provides a simple REST interface to capture full-page, responsive screenshots of any website. It supports JPEG, PNG, and PDF formats, custom viewport sizes, and offers a free tier of 50 screenshots per month with no credit card required. The service is powered by Playwright on dedicated VPS for pixel‑perfect results, includes detailed usage statistics, rate limits, and tiered pricing plans for higher usage, and is designed for developers needing reliable, high‑quality visual snapshots of web pages.
+description: SiteGrab Screenshot API, built by LaminarForge, provides a simple REST interface to capture full-page, responsive screenshots of
+  any website. It supports JPEG, PNG, and PDF formats, custom viewport sizes, and offers a free tier of 50 screenshots per month with no credit
+  card required. The service is powered by Playwright on dedicated VPS for pixel‑perfect results, includes detailed usage statistics, rate limits,
+  and tiered pricing plans for higher usage, and is designed for developers needing reliable, high‑quality visual snapshots of web pages.
 url: https://raw.githubusercontent.com/api-evangelist/sitegrab/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-18 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-17'
 modified: '2026-10-17'
@@ -15,21 +18,20 @@ tags:
 - Automation
 - Image
 - Web
-apis:
-- name: SiteGrab Screenshot API
-  description: Capture pixel-perfect screenshots of any webpage via a simple REST API.
-  humanURL: https://api.sitegrab.dev/v1/docs
-  baseURL: https://api.sitegrab.dev
-  properties:
-  - type: OpenAPI
-    url: openapi/sitegrab-openapi.json
-  aid: sitegrab:sitegrab-screenshot-api
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Authentication
+  url: authentication/sitegrab-authentication.yml
+- type: Conformance
+  url: conformance/sitegrab-conformance.yml
+- type: Hosts
+  url: hosts/sitegrab-hosts.yml
+- type: Vendors
+  url: vendors/sitegrab-vendors.yml
 - type: DomainSecurity
   url: security/sitegrab-domain-security.yml
 - type: Website
@@ -46,6 +48,18 @@ common:
   url: https://sitegrab.dev/contact
 - type: TermsOfService
   url: https://sitegrab.dev/terms
+apis:
+- name: SiteGrab Screenshot API
+  description: Capture pixel-perfect screenshots of any webpage via a simple REST API.
+  humanURL: https://api.sitegrab.dev/v1/docs
+  baseURL: https://api.sitegrab.dev
+  aid: sitegrab:sitegrab-screenshot-api
 x-submission-notes: OpenAPI 3.0.3 live; free 50/mo
 x-submission-probe: openapi.json 200, docs 200, root 200, JSON 404
 x-submitted-by: ukcjmad@yahoo.com (apis.io/add, 2026-10-15)
+x-enrichment:
+  date: '2026-10-18'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
