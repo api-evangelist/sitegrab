@@ -1,0 +1,30 @@
+generated: '2026-10-20'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/sitegrab-openapi.json
+vocabulary:
+  name: SiteGrab Screenshot API (LaminarForge) Domain Vocabulary
+  description: 'Terms declared by SiteGrab Screenshot API (LaminarForge)''s own API contract: its resource groups, objects and enumerations, with
+    the contract''s definitions. Derived, not authored.'
+  version: '2026-10-20'
+  terms:
+  - term: Screenshots
+    definition: Capture webpage screenshots
+    tags:
+    - Resource Group
+    source: openapi/sitegrab-openapi.json
+  - term: Account
+    definition: API key management
+    tags:
+    - Resource Group
+    source: openapi/sitegrab-openapi.json
+  - term: Billing
+    definition: Subscription and payment management
+    tags:
+    - Resource Group
+    source: openapi/sitegrab-openapi.json
+  - term: Status
+    definition: Health check and usage monitoring
+    tags:
+    - Resource Group
+    source: openapi/sitegrab-openapi.json

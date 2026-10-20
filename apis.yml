@@ -24,6 +24,14 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: AgenticAccess
+  url: agentic-access/sitegrab-agentic-access.yml
+- type: Spectral
+  url: rules/sitegrab-rules.yml
+- type: Vocabulary
+  url: vocabulary/sitegrab-vocabulary.yml
+- type: ErrorCatalog
+  url: errors/sitegrab-problem-types.yml
 - type: Authentication
   url: authentication/sitegrab-authentication.yml
 - type: Conformance
@@ -54,6 +62,101 @@ apis:
   humanURL: https://api.sitegrab.dev/v1/docs
   baseURL: https://api.sitegrab.dev
   aid: sitegrab:sitegrab-screenshot-api
+- aid: sitegrab:sitegrab-checkout-api
+  name: SiteGrab Screenshot API (LaminarForge) Checkout API
+  description: >-
+    The Checkout API from SiteGrab Screenshot API (LaminarForge) — 1 operation(s) for checkout.
+  humanURL: https://api.sitegrab.dev/v1/docs
+  baseURL: https://api.sitegrab.dev
+  tags:
+  - Checkout
+  properties:
+  - type: OpenAPI
+    url: openapi/sitegrab-checkout-api-openapi.yml
+- aid: sitegrab:sitegrab-docs-api
+  name: SiteGrab Screenshot API (LaminarForge) Docs API
+  description: The Docs API from SiteGrab Screenshot API (LaminarForge) — 1 operation(s) for docs.
+  humanURL: https://api.sitegrab.dev/v1/docs
+  baseURL: https://api.sitegrab.dev
+  tags:
+  - Docs
+  properties:
+  - type: OpenAPI
+    url: openapi/sitegrab-docs-api-openapi.yml
+- aid: sitegrab:sitegrab-health-api
+  name: SiteGrab Screenshot API (LaminarForge) Health API
+  description: The Health API from SiteGrab Screenshot API (LaminarForge) — 1 operation(s) for health.
+  humanURL: https://api.sitegrab.dev/v1/docs
+  baseURL: https://api.sitegrab.dev
+  tags:
+  - Health
+  properties:
+  - type: OpenAPI
+    url: openapi/sitegrab-health-api-openapi.yml
+- aid: sitegrab:sitegrab-keys-api
+  name: SiteGrab Screenshot API (LaminarForge) Keys API
+  description: The Keys API from SiteGrab Screenshot API (LaminarForge) — 1 operation(s) for keys.
+  humanURL: https://api.sitegrab.dev/v1/docs
+  baseURL: https://api.sitegrab.dev
+  tags:
+  - Keys
+  properties:
+  - type: OpenAPI
+    url: openapi/sitegrab-keys-api-openapi.yml
+- aid: sitegrab:sitegrab-screenshot-api
+  name: SiteGrab Screenshot API (LaminarForge) Screenshot API
+  description: >-
+    The Screenshot API from SiteGrab Screenshot API (LaminarForge) — 1 operation(s) for screenshot.
+  humanURL: https://api.sitegrab.dev/v1/docs
+  baseURL: https://api.sitegrab.dev
+  tags:
+  - Screenshot
+  properties:
+  - type: OpenAPI
+    url: openapi/sitegrab-screenshot-api-openapi.yml
+- aid: sitegrab:sitegrab-signup-api
+  name: SiteGrab Screenshot API (LaminarForge) Signup API
+  description: The Signup API from SiteGrab Screenshot API (LaminarForge) — 1 operation(s) for signup.
+  humanURL: https://api.sitegrab.dev/v1/docs
+  baseURL: https://api.sitegrab.dev
+  tags:
+  - Signup
+  properties:
+  - type: OpenAPI
+    url: openapi/sitegrab-signup-api-openapi.yml
+- aid: sitegrab:sitegrab-sitegrab-screenshot-api-api
+  name: SiteGrab Screenshot API (LaminarForge) SiteGrab Screenshot API
+  description: >-
+    The SiteGrab Screenshot API API from SiteGrab Screenshot API (LaminarForge) — 1 operation(s) for sitegrab
+    screenshot api.
+  humanURL: https://api.sitegrab.dev/v1/docs
+  baseURL: https://api.sitegrab.dev
+  tags:
+  - SiteGrab Screenshot API
+  properties:
+  - type: OpenAPI
+    url: openapi/sitegrab-sitegrab-screenshot-api-api-openapi.yml
+- aid: sitegrab:sitegrab-usage-api
+  name: SiteGrab Screenshot API (LaminarForge) Usage API
+  description: The Usage API from SiteGrab Screenshot API (LaminarForge) — 1 operation(s) for usage.
+  humanURL: https://api.sitegrab.dev/v1/docs
+  baseURL: https://api.sitegrab.dev
+  tags:
+  - Usage
+  properties:
+  - type: OpenAPI
+    url: openapi/sitegrab-usage-api-openapi.yml
+- aid: sitegrab:sitegrab-webhook-api
+  name: SiteGrab Screenshot API (LaminarForge) Webhook API
+  description: >-
+    The Webhook API from SiteGrab Screenshot API (LaminarForge) — 1 operation(s) for webhook.
+  humanURL: https://api.sitegrab.dev/v1/docs
+  baseURL: https://api.sitegrab.dev
+  tags:
+  - Webhook
+  properties:
+  - type: OpenAPI
+    url: openapi/sitegrab-webhook-api-openapi.yml
 x-submission-notes: OpenAPI 3.0.3 live; free 50/mo
 x-submission-probe: openapi.json 200, docs 200, root 200, JSON 404
 x-submitted-by: ukcjmad@yahoo.com (apis.io/add, 2026-10-15)

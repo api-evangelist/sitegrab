@@ -1,0 +1,31 @@
+generated: '2026-10-20'
+method: derived
+generator: derive-problem-types.py
+source:
+- openapi/sitegrab-openapi.json
+format: custom
+envelope:
+  media_type: null
+  schema: null
+coverage:
+  operations: 10
+  statuses_declared: 3
+problems:
+- status: 400
+  title: Bad Request
+  description: Missing URL parameter
+  operations: 2
+  media_types: []
+  schema: null
+- status: 401
+  title: Unauthorized
+  description: Missing API key
+  operations: 3
+  media_types: []
+  schema: null
+- status: 429
+  title: Too Many Requests
+  description: Rate limit exceeded
+  operations: 2
+  media_types: []
+  schema: null

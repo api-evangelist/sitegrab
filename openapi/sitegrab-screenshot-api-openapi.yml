@@ -1,0 +1,129 @@
+openapi: 3.2.0
+info:
+  title: SiteGrab Screenshot API
+  description: 'Capture pixel-perfect screenshots of any webpage via a simple REST API. Supports JPEG, PNG, full-page capture modes with custom viewport sizes. Free tier: 50 screenshots/month.'
+  version: 1.0.0
+  contact:
+    url: https://sitegrab.dev/contact
+servers:
+- url: https://api.sitegrab.dev
+  description: Production API server
+- url: https://sitegrab.dev
+  description: Website
+tags:
+- name: Screenshot
+paths:
+  /v1/screenshot:
+    post:
+      summary: Capture a screenshot
+      description: Captures a screenshot of a given URL and returns the image bytes. Supports JPEG, PNG, full-page, and custom viewport sizes.
+      operationId: captureScreenshot
+      security:
+      - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - url
+              properties:
+                url:
+                  type: string
+                  format: uri
+                  description: The webpage URL to capture
+                  example: https://example.com
+                format:
+                  type: string
+                  enum:
+                  - jpeg
+                  - png
+                  default: jpeg
+                  description: Image format for the screenshot
+                full_page:
+                  type: boolean
+                  default: false
+                  description: Capture the full scrollable page
+                viewport:
+                  type: object
+                  properties:
+                    width:
+                      type: integer
+                      default: 1280
+                      example: 1920
+                    height:
+                      type: integer
+                      default: 720
+                      example: 1080
+                  description: Browser viewport dimensions
+      responses:
+        '200':
+          description: Screenshot image bytes
+          content:
+            image/png: {}
+            image/jpeg: {}
+        '400':
+          description: Missing URL parameter
+        '401':
+          description: Missing or invalid API key
+        '429':
+          description: Rate limit exceeded
+      tags:
+      - Screenshot
+    get:
+      summary: Quick screenshot via query params
+      description: Captures a screenshot from a URL passed as a query parameter. Returns immediately with a pending status.
+      operationId: quickScreenshot
+      security:
+      - ApiKeyAuth: []
+      - ApiKeyParam: []
+      parameters:
+      - name: url
+        in: query
+        required: true
+        schema:
+          type: string
+          format: uri
+        description: URL to capture
+      - name: key
+        in: query
+        required: false
+        schema:
+          type: string
+        description: API key (alternative to X-API-Key header)
+      responses:
+        '202':
+          description: Accepted — capture queued
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  url:
+                    type: string
+                  status:
+                    type: string
+                    enum:
+                    - pending
+        '401':
+          description: Missing API key
+      tags:
+      - Screenshot
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: Your SiteGrab API key
+    ApiKeyParam:
+      type: apiKey
+      in: query
+      name: key
+      description: API key as query parameter (alternative to header)
+externalDocs:
+  description: Full documentation with code examples
+  url: https://sitegrab.dev/docs

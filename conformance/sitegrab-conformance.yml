@@ -1,14 +1,14 @@
-generated: '2026-10-18'
+generated: '2026-10-20'
 method: derived
 generator: derive-conformance.py
-source: openapi/ (1 document(s), 0 mutating operations)
+source: openapi/ (1 document(s), 4 mutating operations)
 standards:
 - id: openapi-3.0
   conforms: true
   evidence: the document declares 3.0.3
 - id: oauth2
   conforms: false
-  evidence: no securitySchemes declared
+  evidence: 'securitySchemes: ApiKeyAuth (apiKey), ApiKeyParam (apiKey)'
 - id: rfc9457
   conforms: false
   evidence: no response declares application/problem+json

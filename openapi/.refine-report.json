@@ -1,0 +1,46 @@
+{
+  "provider": "sitegrab",
+  "sources": [
+    "sitegrab-openapi.json"
+  ],
+  "outputs": [
+    "sitegrab-checkout-api-openapi.yml",
+    "sitegrab-docs-api-openapi.yml",
+    "sitegrab-health-api-openapi.yml",
+    "sitegrab-keys-api-openapi.yml",
+    "sitegrab-screenshot-api-openapi.yml",
+    "sitegrab-signup-api-openapi.yml",
+    "sitegrab-sitegrab-screenshot-api-api-openapi.yml",
+    "sitegrab-usage-api-openapi.yml",
+    "sitegrab-webhook-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/sitegrab-openapi.json"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sitegrab-openapi.json: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "sitegrab-openapi.json: tagged paths POST /v1/screenshot -> Screenshot",
+    "sitegrab-openapi.json: tagged paths GET /v1/screenshot -> Screenshot",
+    "sitegrab-openapi.json: tagged paths POST /v1/keys -> Keys",
+    "sitegrab-openapi.json: tagged paths GET /v1/health -> Health",
+    "sitegrab-openapi.json: tagged paths GET /v1/usage -> Usage",
+    "sitegrab-openapi.json: tagged paths POST /v1/checkout -> Checkout",
+    "sitegrab-openapi.json: tagged paths POST /v1/webhook -> Webhook",
+    "sitegrab-openapi.json: tagged paths GET /docs -> Docs",
+    "sitegrab-openapi.json: tagged paths GET /signup -> Signup",
+    "sitegrab-openapi.json: tagged paths GET / -> SiteGrab Screenshot API",
+    "sitegrab-openapi.json: declared missing tag: Checkout",
+    "sitegrab-openapi.json: declared missing tag: Docs",
+    "sitegrab-openapi.json: declared missing tag: Health",
+    "sitegrab-openapi.json: declared missing tag: Keys",
+    "sitegrab-openapi.json: declared missing tag: Screenshot",
+    "sitegrab-openapi.json: declared missing tag: Signup",
+    "sitegrab-openapi.json: declared missing tag: SiteGrab Screenshot API",
+    "sitegrab-openapi.json: declared missing tag: Usage",
+    "sitegrab-openapi.json: declared missing tag: Webhook",
+    "apis.yml register: written (+9 apis, 10 total)"
+  ],
+  "skipped": []
+}

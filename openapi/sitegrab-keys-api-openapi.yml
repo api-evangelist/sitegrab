@@ -1,0 +1,70 @@
+openapi: 3.2.0
+info:
+  title: SiteGrab Screenshot Keys API
+  description: 'Capture pixel-perfect screenshots of any webpage via a simple REST API. Supports JPEG, PNG, full-page capture modes with custom viewport sizes. Free tier: 50 screenshots/month.'
+  version: 1.0.0
+  contact:
+    url: https://sitegrab.dev/contact
+servers:
+- url: https://api.sitegrab.dev
+  description: Production API server
+- url: https://sitegrab.dev
+  description: Website
+tags:
+- name: Keys
+paths:
+  /v1/keys:
+    post:
+      summary: Create an API key
+      description: 'Generates a new API key. Free tier: 50 screenshots/month. Rate-limited to 3 keys per hour per IP.'
+      operationId: createApiKey
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tier:
+                  type: string
+                  enum:
+                  - free
+                  - starter
+                  - pro
+                  - business
+                  default: free
+                  description: Subscription tier
+      responses:
+        '200':
+          description: API key created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  api_key:
+                    type: string
+                    example: lf_abc123...
+                  tier:
+                    type: string
+                  limit:
+                    type: integer
+                    description: Monthly screenshot limit
+        '429':
+          description: Rate limit exceeded (max 3 keys per hour)
+      tags:
+      - Keys
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: Your SiteGrab API key
+    ApiKeyParam:
+      type: apiKey
+      in: query
+      name: key
+      description: API key as query parameter (alternative to header)
+externalDocs:
+  description: Full documentation with code examples
+  url: https://sitegrab.dev/docs

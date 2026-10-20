@@ -1,4 +1,4 @@
-generated: '2026-10-18'
+generated: '2026-10-20'
 method: derived
 source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
 generator: derive-hosts.py
@@ -15,11 +15,6 @@ hosts:
   found_by:
   - pointer
   - apis[]
-  - probed
-  - site-links
-  - docs-index
-  - contract-discovery
-  - well-known
   types:
   - Documentation
   - APIReference
@@ -32,10 +27,6 @@ hosts:
 - host: sitegrab.dev
   found_by:
   - pointer
-  - probed
-  - docs-index
-  - contract-discovery
-  - well-known
   - vendor-detect
   types:
   - Website
@@ -44,7 +35,6 @@ hosts:
   - Support
   - TermsOfService
   serves:
-  - docs
   - cdn
   vendor: cloudflare
   registrable_domain: sitegrab.dev
