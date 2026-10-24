@@ -13,6 +13,11 @@ specificationVersion: '0.20'
 created: '2026-10-17'
 modified: '2026-10-17'
 tags:
+- Screenshots
+- Automation
+- Image
+- Web
+tags_raw:
 - Screenshot
 - API
 - Automation
@@ -110,6 +115,8 @@ apis:
   humanURL: https://api.sitegrab.dev/v1/docs
   baseURL: https://api.sitegrab.dev
   tags:
+  - Screenshots
+  tags_raw:
   - Screenshot
   properties:
   - type: OpenAPI
@@ -120,6 +127,8 @@ apis:
   humanURL: https://api.sitegrab.dev/v1/docs
   baseURL: https://api.sitegrab.dev
   tags:
+  - Sign Up
+  tags_raw:
   - Signup
   properties:
   - type: OpenAPI
