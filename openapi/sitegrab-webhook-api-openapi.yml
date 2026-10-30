@@ -1,10 +1,10 @@
 openapi: 3.2.0
 info:
-  title: SiteGrab Screenshot Webhook API
-  description: 'Capture pixel-perfect screenshots of any webpage via a simple REST API. Supports JPEG, PNG, full-page capture modes with custom viewport sizes. Free tier: 50 screenshots/month.'
+  title: Sitegrab Webhook API
   version: 1.0.0
   contact:
     url: https://sitegrab.dev/contact
+  description: 'Operations tagged Webhook across 2 of this provider''s published API definitions: sitegrab-openapi.json, sitegrab-openapi.json. Each path carries the servers of the definition it was published in.'
 servers:
 - url: https://api.sitegrab.dev
   description: Production API server
@@ -31,6 +31,11 @@ paths:
           description: Invalid signature
       tags:
       - Webhook
+    servers:
+    - url: https://api.sitegrab.dev
+      description: Production API server
+    - url: https://sitegrab.dev
+      description: Website
 components:
   securitySchemes:
     ApiKeyAuth:
@@ -46,3 +51,6 @@ components:
 externalDocs:
   description: Full documentation with code examples
   url: https://sitegrab.dev/docs
+x-refined-from:
+- sitegrab-openapi.json
+- sitegrab-openapi.json

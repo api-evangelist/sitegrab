@@ -1,6 +1,7 @@
 {
   "provider": "sitegrab",
   "sources": [
+    "_original/sitegrab-openapi.json",
     "sitegrab-openapi.json"
   ],
   "outputs": [
@@ -20,6 +21,7 @@
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "sitegrab-openapi.json: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
     "sitegrab-openapi.json: tagged paths POST /v1/screenshot -> Screenshot",
     "sitegrab-openapi.json: tagged paths GET /v1/screenshot -> Screenshot",
@@ -40,7 +42,46 @@
     "sitegrab-openapi.json: declared missing tag: SiteGrab Screenshot API",
     "sitegrab-openapi.json: declared missing tag: Usage",
     "sitegrab-openapi.json: declared missing tag: Webhook",
-    "apis.yml register: written (+9 apis, 10 total)"
+    "sitegrab-openapi.json: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "sitegrab-openapi.json: tagged paths POST /v1/screenshot -> Screenshot",
+    "sitegrab-openapi.json: tagged paths GET /v1/screenshot -> Screenshot",
+    "sitegrab-openapi.json: tagged paths POST /v1/keys -> Keys",
+    "sitegrab-openapi.json: tagged paths GET /v1/health -> Health",
+    "sitegrab-openapi.json: tagged paths GET /v1/usage -> Usage",
+    "sitegrab-openapi.json: tagged paths POST /v1/checkout -> Checkout",
+    "sitegrab-openapi.json: tagged paths POST /v1/webhook -> Webhook",
+    "sitegrab-openapi.json: tagged paths GET /docs -> Docs",
+    "sitegrab-openapi.json: tagged paths GET /signup -> Signup",
+    "sitegrab-openapi.json: tagged paths GET / -> SiteGrab Screenshot API",
+    "sitegrab-openapi.json: declared missing tag: Checkout",
+    "sitegrab-openapi.json: declared missing tag: Docs",
+    "sitegrab-openapi.json: declared missing tag: Health",
+    "sitegrab-openapi.json: declared missing tag: Keys",
+    "sitegrab-openapi.json: declared missing tag: Screenshot",
+    "sitegrab-openapi.json: declared missing tag: Signup",
+    "sitegrab-openapi.json: declared missing tag: SiteGrab Screenshot API",
+    "sitegrab-openapi.json: declared missing tag: Usage",
+    "sitegrab-openapi.json: declared missing tag: Webhook",
+    "tag 'Checkout' spans 2 source specs (sitegrab-openapi.json, sitegrab-openapi.json): per-path servers applied",
+    "tag 'Docs' spans 2 source specs (sitegrab-openapi.json, sitegrab-openapi.json): per-path servers applied",
+    "tag 'Health' spans 2 source specs (sitegrab-openapi.json, sitegrab-openapi.json): per-path servers applied",
+    "tag 'Keys' spans 2 source specs (sitegrab-openapi.json, sitegrab-openapi.json): per-path servers applied",
+    "tag 'Screenshot' spans 2 source specs (sitegrab-openapi.json, sitegrab-openapi.json): per-path servers applied",
+    "tag 'Signup' spans 2 source specs (sitegrab-openapi.json, sitegrab-openapi.json): per-path servers applied",
+    "tag 'SiteGrab Screenshot API' spans 2 source specs (sitegrab-openapi.json, sitegrab-openapi.json): per-path servers applied",
+    "tag 'Usage' spans 2 source specs (sitegrab-openapi.json, sitegrab-openapi.json): per-path servers applied",
+    "tag 'Webhook' spans 2 source specs (sitegrab-openapi.json, sitegrab-openapi.json): per-path servers applied",
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "sitegrab-checkout-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sitegrab-docs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sitegrab-health-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sitegrab-keys-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sitegrab-screenshot-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sitegrab-signup-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sitegrab-sitegrab-screenshot-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sitegrab-usage-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sitegrab-webhook-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
